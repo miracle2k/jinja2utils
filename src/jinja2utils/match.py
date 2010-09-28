@@ -14,10 +14,12 @@ class matcher(object):
     page link within a navigation.
     """
 
-    def __init__(self, cmp_value, insert_text):
-        self.cmp_value, self.insert_text = cmp_value, insert_text
+    def __init__(self, cmp_value, match_insert, no_match=''):
+        self.cmp_value = cmp_value
+        self.match_insert = match_insert
+        self.no_match = no_match
 
     def __call__(self, *items):
         if self.cmp_value in items:
-            return self.insert_text
-        return ''
+            return self.match_insert
+        return self.no_match

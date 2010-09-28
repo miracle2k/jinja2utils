@@ -2,3 +2,8 @@
 
 /BRANCH_TODO
 /jinja2utils.wpr
+
+# distutils stuff
+/build/
+/dist/
+*.egg-info

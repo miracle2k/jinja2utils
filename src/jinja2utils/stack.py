@@ -54,7 +54,7 @@ class Stack(object):
                 # match against it as well.
                 if value == item[0]:
                     return True
-            if value in item:
+            if value == item:
                 return True
         return False
 

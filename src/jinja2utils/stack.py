@@ -45,6 +45,19 @@ class Stack(object):
     def __len__(self):
         return len(self.data)
 
+    def __contains__(self, value):
+        for item in self.data:
+            if len(item) == 1:
+                # This is a special case, and the reason why we
+                # implement __contains__. While we store all items
+                # as tuples, if the user gave us only a single value,
+                # match against it as well.
+                if value == item[0]:
+                    return True
+            if value in item:
+                return True
+        return False
+
     def top(self):
         try:
             return self.data[-1]

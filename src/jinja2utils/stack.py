@@ -17,7 +17,7 @@ class Stack(object):
         {% do breadcrumbs('Page', '/page') %}
         {% extends 'base.html' %}
 
-    You ``base.html`` would include something like this:
+    Your ``base.html`` would include something like this:
 
         Index
         {% for name, url in breadcrumbs %}
